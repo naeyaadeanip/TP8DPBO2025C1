@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JUDUL</title>
+  <!-- Pake lokal, bukan CDN -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="course.php">Course</a>
+          </li>
+        </ul>
+        <span class="navbar-brand text-white"><strong>Course Student</strong></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 col-sm-8 col-10 my-5">
+        <h1 class="text-center pt-3">Tambah Course</h1>
+        <form action="course.php" method="POST">
+          <div class="form-group mt-3">
+            <label for="course_name">Nama Course</label>
+            <input type="text" class="form-control" name="course_name" required />
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="description">Deskripsi Course</label>
+            <textarea class="form-control" name="description" rows="3" required></textarea>
+          </div>
+  
+          <button type="submit" name="add" class="btn btn-primary mt-3 d-block mx-auto">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+
+  <h1 class="text-center">Tabel Course</h1>
+  <div class="container mt-4">
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center align-middle text-nowrap">
+        <thead class="table-danger">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Course</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          DATA_COURSE
+          <!-- Contoh baris dummy:
+          <tr>
+            <td>1</td>
+            <td>Algoritma</td>
+            <td>Pemrograman dasar</td>
+            <td>
+              <a href="#" class="btn btn-warning btn-sm me-1">Edit</a>
+              <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+            </td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <!-- Script lokal, bukan CDN -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

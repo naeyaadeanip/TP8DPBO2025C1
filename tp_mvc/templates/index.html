@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Course Student</title>
+  <!-- Pake file lokal -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="course.php">Course</a>
+          </li>
+        </ul>
+        <span class="navbar-brand text-white"><strong>Course Student</strong></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Form Tambah Student -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 my-3">
+        <div class="card p-4">
+          <h2 class="card-title text-center mb-4">Tambah Student</h2>
+          <form action="index.php" method="POST">
+            <div class="form-group mb-3">
+              <label for="nama">Nama Student</label>
+              <input type="text" class="form-control" name="name" id="name" required />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="nim">NIM</label>
+              <input type="text" class="form-control" name="nim" id="nim" required />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" name="phone" id="phone" required />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="join_date">Join Date</label>
+              <input type="date" class="form-control" name="join_date" id="join_date">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="course">Select Course</label>
+              <select class="form-control" name="course_id" id="course" required>
+                OPTION
+              </select>
+          </div>          
+
+            <button type="submit" name="add" class="btn btn-primary w-100">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tabel Course Student -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 my-3">
+        <h1 class="text-center mb-4">Tabel Course Student</h1>
+        <table class="table table-bordered table-striped text-center align-middle">
+          <thead class="table-danger">
+            <tr>
+              <th class="col-1">ID</th>
+              <th>Nama Student</th>
+              <th>NIM</th>
+              <th>Phone</th>
+              <th>Join Date</th>
+              <th>Course</th> <!-- Nama Course ditambahkan di sini -->
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            DATA_STUDENT
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script lokal -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
